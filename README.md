@@ -1,36 +1,46 @@
-# currency
-This code base requires golang version 1.14 or above because modules are resolved based on go modules
-
-To run the server make sure you have internet connection to download deps from github
-
-        go run currency.go
+# CRYPTO-MONITOR
 
 
-To test the server
+# Dependencies 
+Go > 1.12 <br>
+(Gorilla Websockets)[https://github.com/gorilla/websocket]
 
+# Build
+
+```sh
+ go build currency.go
+```
+
+# RUN
+
+```sh
+./currency
+```
+
+OR 
+
+```sh
+ go run currency.go
+```
+
+# TEST
+```sh
         curl -X GET "http://localhost:8080/currency/all"
         curl -X GET "http://localhost:8080/currency/ETHBTC"
         curl -X GET "http://localhost:8080/currency/BTCUSD"
+```
 
-CONGIURE allowed symbols
+# CONFIGURE
 
-    The file currency.config in the same dir can be used to configure which all symbols can be allowed
-    Even not configured ETHBSD and BTCUSD is allowed. During the start of server. We will fetch all 
-    valid public symbols by HTTP request and validate all configured symbols in currency.config against 
-    public symbols
+The file currency.config in the same dir can be used to configure which all symbols can be allowed.By default ETHBSD and BTCUSD is monitored
 
 
-
-How I Resolved Dependecies
+## Resolve Dependecies
 
 From the currency dir run 
-       
-        go mod init currency
-
-Above command will download and install all dependecy packages if not already present
-For this execise I have used single external package "github.com/gorilla/websocket"
-Socket market data was transmitted over websocket. To listen to socket market data we need above package
-Alternative method is to use http request with a configurable polling time interval 
+```sh
+go mod init currency
+```
 
 
 

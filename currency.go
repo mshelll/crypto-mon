@@ -77,7 +77,6 @@ func currencyHandler(w http.ResponseWriter, req *http.Request) {
 	url := req.URL.Path
 	symbol := strings.TrimLeft(url, "/currency/")
 
-
 	if symbol == "all" {
 
 		response := make(map[string][]string)
