@@ -3,7 +3,7 @@
 
 # Dependencies 
 Go > 1.12 <br>
-(Gorilla Websockets)[https://github.com/gorilla/websocket]
+[Gorilla Websockets](https://github.com/gorilla/websocket)
 
 # Build
 
