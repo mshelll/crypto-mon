@@ -25,9 +25,9 @@ OR
 
 # TEST
 ```sh
-        curl -X GET "http://localhost:8080/currency/all"
-        curl -X GET "http://localhost:8080/currency/ETHBTC"
-        curl -X GET "http://localhost:8080/currency/BTCUSD"
+curl -X GET "http://localhost:8080/currency/all"
+curl -X GET "http://localhost:8080/currency/ETHBTC"
+curl -X GET "http://localhost:8080/currency/BTCUSD"
 ```
 
 # CONFIGURE
